@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+    <style>
+        * {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(rgba(35, 213, 198, 0.732), rgba(12, 182, 83, 0.742));
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .btn {
+            background-color: black;
+            color: white;
+            font: 300 40px 'Poppins', sans-serif;
+            padding: 15px 30px;
+            width: 200px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: ease-in-out 0.3s;
+        }
+
+        .tituloPrincipal {
+            font: 700 50px 'Poppins', sans-serif;
+        }
+
+        .titulo {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .botoes {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 500px;
+        }
+
+        /* RESPONSIVO MOBILE */
+        @media screen and (max-width:500px) {
+            .botoes {
+                margin: 0;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .btn {
+                margin: 13px;
+                font-size: 30px;
+            }
+
+            .tituloPrincipal {
+                font-size: 40px;
+            }
+        }
+    </style>
+
+    <script>
+        function sim() {
+            location.href = "https://www.tiktok.com/@luzia733/video/7232618761218575621"
+        }
+        function esquivo(btn) {
+            btn.style.position = 'absolute';
+            btn.style.bottom = posicao(10, 80);
+            btn.style.left = posicao (10, 80)
+        }
+        function posicao(min, max) {
+            return(Math.random()*(max-min+min))+"%"
+        }
+    </script>
+</head>
+<body>
+    <div class="titulo">
+        <h1 class="tituloPrincipal">
+            FAZ O PIX?
+        </h1>
+    </div>
+    <div class="botoes">
+        <div class="botaoS">
+            <button class="btn" onclick="sim()">SIM</button>
+        </div>
+        <div class="botaoN">
+            <button class="btn" onclick="esquivo(this)" onmouseover="esquivo(this)">NÃO</button>
+        </div>
+    </div>
+</body>
+</html>
